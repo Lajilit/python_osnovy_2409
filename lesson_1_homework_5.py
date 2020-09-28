@@ -7,8 +7,9 @@ proceeds = int(input('Введите сумму выручки: '))
 costs = int(input('Введите сумму издержек: '))
 if proceeds > costs:
     profit = proceeds - costs
+    profitability = profit / proceeds * 100
     print(f'Фирма работает с прибылью. Прибыль составила {profit}')
-    print(f'Рентабельность составила {profit / proceeds}')
+    print(f'Рентабельность составила {round(profitability, 2)} %')
     employee_number = int(input('Укажите численность сотрудников фирмы: '))
     print(f'Прибыль фирмы в расчете на 1 сотрудника составила {profit / employee_number}')
 elif proceeds < costs:

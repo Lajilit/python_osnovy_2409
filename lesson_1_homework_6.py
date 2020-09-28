@@ -3,18 +3,17 @@
 # который результат спортсмена составит не менее b километров. Программа должна принимать значения параметров a и b
 # и выводить одно натуральное число — номер дня.
 try:
-    a = int(input('Введите начальный результат: '))
-    b = int(input('Введите желаемый результат: '))
+    a = float(input('Введите начальный результат: '))
+    b = float(input('Введите желаемый результат: '))
     day_number = 1
     if a <= 0 or b <= 0:
         raise ValueError
-
 except ValueError:
-    print('Нужно ввести целое положительное число')
+    print('Нужно ввести положительное число')
 else:
     while a < b:
-        print(f'{day_number} день: {a}')
+        print(f'{day_number} день: {round(a, 2)}')
         day_number += 1
-        a = round(a * 1.1, 2)
-    print(f'{day_number} день: {a}')
+        a = a * 1.1
+    print(f'{day_number} день: {round(a, 2)}')
     print(f'На {day_number}-й день спортсмен достиг результата - не менее {b} км.')

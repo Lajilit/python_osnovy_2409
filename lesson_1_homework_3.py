@@ -2,5 +2,11 @@
 # Считаем 2 + 22 + 222 = 246.
 
 number = input("Введите число:  ")
-
-print(f'{number} + {number*2} + {number*3} = {int(number) + int(number*2) + int(number*3)}')
+try:
+    num = int(number)
+    if num < 0:
+        raise ValueError
+except ValueError:
+    print('Нужно ввести положительное число')
+else:
+    print(f'{number} + {number*2} + {number*3} = {int(number) + int(number*2) + int(number*3)}')
