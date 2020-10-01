@@ -22,7 +22,11 @@ if __name__ == '__main__':
                        surname='smith',
                        city='moscow',
                        phone='81234567890',
+<<<<<<< HEAD
                        b_year=2020,
+=======
+                       b_year='2020',
+>>>>>>> lesson_3
                        email='123@mail.ru'
                        )
           )
