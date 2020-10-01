@@ -3,7 +3,6 @@
 
 def my_func(num_1, num_2, num_3):
     """Takes three (non-complex) numbers as arguments and returns the sum of the two largest ones"""
-<<<<<<< HEAD
     try:
         result = sum((num_1, num_2, num_3)) - min(num_1, num_2, num_3)
     except TypeError:
@@ -14,10 +13,4 @@ def my_func(num_1, num_2, num_3):
 
 if __name__ == '__main__':
     print(my_func('5643', 566, 1858))
-=======
-    return sum((num_1, num_2, num_3)) - min(num_1, num_2, num_3)
 
-
-if __name__ == '__main__':
-    print(my_func(206, 566, 1858))
->>>>>>> lesson_3

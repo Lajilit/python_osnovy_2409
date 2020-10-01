@@ -7,11 +7,7 @@ def input_div(num_1, num_2):
     try:
         result = num_1 / num_2
     except ZeroDivisionError:
-<<<<<<< HEAD
         return 'Division by zero'
-=======
-        print('Division by zero')
->>>>>>> lesson_3
     else:
         return result
 
