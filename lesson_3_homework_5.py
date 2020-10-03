@@ -6,32 +6,34 @@
 
 
 def sum_numbers(numbers):
+    """Calculates the sum of all numbers in the argument until the character 'q' is entered
+
+    Takes a string consisting of one or more float numbers separated by spaces.
+    Returns a tuple consisting of a number (sum of numbers) and a bool True (if 'q' in  argument) or False (if not))"""
     numbers_list = numbers.split()
     func_result = 0
-    try:
-        for i in range(len(numbers_list)):
-            if numbers_list[i] == 'q':
-                return [func_result, 'q']
+    for i in numbers_list:
+        if i == 'q':
+            return func_result, True
+        else:
+            try:
+                i = float(i)
+            except ValueError:
+                print(f'ValueError: "{i}" is not a number. You should enter numbers separated by spaces')
+                continue
             else:
-                numbers_list[i] = float(numbers_list[i])
-                func_result += numbers_list[i]
-    except ValueError:
-        return 'ValueError: you should enter numbers separated by spaces'
-    else:
-        return func_result
+                func_result += i
+    return func_result, False
 
 
 if __name__ == '__main__':
     result = 0
     while True:
         numbers_input = input("Enter numbers separated by spaces: ")
-        a = sum_numbers(numbers_input)
-        if type(a) is list:
-            result += a[0]
+        result_sum, ready_to_exit = sum_numbers(numbers_input)
+        result += result_sum
+        if not ready_to_exit:
+            print(f'The sum of all entered numbers is {result}. You can continue typing. To exit enter "q"')
+        else:
             print(f'The sum of all entered numbers is {result}. Counting  is over.')
             break
-        elif type(a) is str:
-            print(a)
-        else:
-            result += a
-            print(f'The sum of all entered numbers is {result}. You can continue typing. To exit enter "q"')
