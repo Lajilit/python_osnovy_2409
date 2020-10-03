@@ -5,7 +5,7 @@
 # заглавной буквы. Необходимо использовать написанную ранее функцию int_func().
 
 def int_func(text):
-    """Works like str.title()"""
+    """Works like str.capitalize()"""
     try:
         return text.capitalize()
     except AttributeError:
