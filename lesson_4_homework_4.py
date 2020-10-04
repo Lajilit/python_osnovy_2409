@@ -21,7 +21,7 @@
 
 # Второй вариант решения:
 
-def my_func(x, y):
+def my_func(x: float, y:int) -> float:
     """Takes the non-complex number as 'x' and a negative integer as 'y' and returns the result of 'x' raised to 'y'
     power """
     try:
@@ -40,4 +40,4 @@ def my_func(x, y):
 
 
 if __name__ == '__main__':
-    print(my_func(25, -10))
+    print(my_func(20, -3))
