@@ -21,16 +21,17 @@
 
 # Второй вариант решения:
 
-def my_func(x: float, y:int) -> float:
-    """Takes the non-complex number as 'x' and a negative integer as 'y' and returns the result of 'x' raised to 'y'
-    power """
+def my_func(x: float, y: 'int, < 0') -> [str, float]:
+    """Takes the non-complex number as 'x' and a negative integer as 'y'
+     and returns the result of 'x' raised to 'y' power """
     try:
         x = float(x)
         y = int(y)
         if y >= 0:
             raise ValueError
     except ValueError:
-        return 'ValueError: "x" must be non-complex number and "y" must be negative integer'
+        return 'ValueError: "x" must be non-complex number and "y" must be ' \
+               'negative integer'
     else:
         result = 1
         while y < 0:
@@ -40,4 +41,4 @@ def my_func(x: float, y:int) -> float:
 
 
 if __name__ == '__main__':
-    print(my_func(20, -3))
+    print(my_func('слон', -3))
