@@ -5,7 +5,6 @@
 # Подсказка: использовать функцию reduce().
 from functools import reduce
 
-my_list = [i for i in range(1, 11) if i % 2 == 0]
+my_list = [i for i in range(100, 1001) if i % 2 == 0]
 
 print(reduce(lambda el_prev, el: el_prev * el, my_list))
-print(2 * 4 * 6 * 8 * 10)

@@ -7,8 +7,8 @@
 # факториал четырёх 4! = 1 * 2 * 3 * 4 = 24.
 # На вебинаре реализовали похожий пример для чисел Фиббоначи.
 
-def fact(num: int) -> 'generator':
-    """Generator of the factorial of a number
+def fact(num: int):
+    """Generator of the factorial of a number for numbers from 1 to num
 
     :param num: positive integer
     :return: generator
@@ -23,7 +23,5 @@ def fact(num: int) -> 'generator':
         yield factorial
 
 
-print(type(fact(10)))
-for el in fact(10):
-    print(el)
-    print(type(el))
+if __name__ == '__main__':
+    print([el for el in fact(10)])
