@@ -8,19 +8,20 @@
 # На вебинаре реализовали похожий пример для чисел Фиббоначи.
 
 def fact(num: int):
-    """Generator of the factorial of a number for numbers from 1 to num
+    """Generator of the factorial of a number for numbers from 0 to num
 
     :param num: positive integer
     :return: generator
     """
-    start = 1
+    start = 0
     end = num + 1
+    factorial = 1
     for i in range(start, end):
-        factorial = 1
-        while i > 1:
+        if i == 0:
+            yield 1
+        else:
             factorial *= i
-            i -= 1
-        yield factorial
+            yield factorial
 
 
 if __name__ == '__main__':
