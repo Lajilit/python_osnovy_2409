@@ -2,7 +2,7 @@
 # строк, выполнить подсчет количества строк, количества слов в каждой
 # строке.
 
-with open('lesson_5_task_2_text.txt', 'r', encoding='UTF-8') as esenin:
+with open('lesson_5_task_2.txt', 'r', encoding='UTF-8') as esenin:
     count_lines = 0
     count_line_words = {}
     count_words = 0

@@ -13,7 +13,7 @@
 # {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 subjects_dict = {}
 
-with open('lesson_5_task_6_text.txt', 'r', encoding='UTF-8') as subjects:
+with open('lesson_5_task_6.txt', 'r', encoding='UTF-8') as subjects:
     for line in subjects:
         subject, hours = line.strip().split(': ')
         hours_list = []

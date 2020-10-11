@@ -3,7 +3,7 @@
 # имеет оклад менее 20 тыс., вывести фамилии этих сотрудников.
 # Выполнить подсчет средней величины дохода сотрудников.
 
-with open('lesson_5_task_3_text.txt', 'r', encoding='UTF-8') as surname_salary:
+with open('lesson_5_task_3.txt', 'r', encoding='UTF-8') as surname_salary:
     number_of_stuff = 0
     sum_salary = 0
     for line in surname_salary:
