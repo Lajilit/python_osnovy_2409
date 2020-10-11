@@ -13,4 +13,4 @@ with open('lesson_5_task_3.txt', 'r', encoding='UTF-8') as surname_salary:
         sum_salary += salary
         if salary < 20000:
             print(f'{surname} salary is less than 20000')
-    print(f'Average salary is {sum_salary / number_of_stuff}')
+    print(f'Average salary is {round(sum_salary / number_of_stuff, 2)}')
