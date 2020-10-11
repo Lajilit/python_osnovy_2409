@@ -14,11 +14,10 @@ translates = {'One': 'Один',
               'Four': 'Четыре'}
 
 with open('l5t4_text_1.txt', 'r', encoding='UTF-8') as eng_numbers, \
-     open('l5t4_text_2.txt', 'w', encoding='UTF-8') as rus_numbers:
+        open('l5t4_text_2.txt', 'w', encoding='UTF-8') as rus_numbers:
     for line in eng_numbers:
         word, sep, num = line.strip().split()
         num = int(num)
         if word in translates:
             word = translates[word]
         rus_numbers.write(f'{word} - {num}\n')
-
