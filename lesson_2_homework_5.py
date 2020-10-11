@@ -7,7 +7,7 @@
 # Пользователь ввел число 1. Результат: 7, 5, 3, 3, 2, 1.
 # Исходный набор натуральных чисел можно задать  непосредственно в коде, например, my_list = [7, 5, 3, 3, 2].
 
-my_list = [42, 33, 20, 15, 8, 7, 3, 2]
+my_list = []
 
 
 def rating_include(list_rating):
@@ -18,15 +18,19 @@ def rating_include(list_rating):
     except ValueError:
         print('Нужно ввести целое положительное число')
     else:
-        for i, n in enumerate(list_rating):
-            if n < input_number:
-                list_rating.insert(i, input_number)
-                break
-        if input_number <= list_rating[-1]:
+        if not list_rating:
             list_rating.append(input_number)
+            print(list_rating)
+        else:
+            for i, n in enumerate(list_rating):
+                if n < input_number:
+                    list_rating.insert(i, input_number)
+                    break
+            if input_number <= list_rating[-1]:
+                list_rating.append(input_number)
 
 
 if __name__ == '__main__':
-    print(my_list)
-    rating_include(my_list)
-    print(my_list)
+    for i in range(15):
+        rating_include(my_list)
+        print(my_list)
