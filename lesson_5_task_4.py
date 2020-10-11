@@ -13,8 +13,8 @@ translates = {'One': 'Один',
               'Three': 'Три',
               'Four': 'Четыре'}
 
-with open('l5t4_text_1.txt', 'r', encoding='UTF-8') as eng_numbers, \
-        open('l5t4_text_2.txt', 'w', encoding='UTF-8') as rus_numbers:
+with open('lesson_5_task_4_text_1.txt', 'r', encoding='UTF-8') as eng_numbers, \
+        open('lesson_5_task_4_text_2.txt', 'w', encoding='UTF-8') as rus_numbers:
     for line in eng_numbers:
         word, sep, num = line.strip().split()
         num = int(num)

@@ -2,7 +2,7 @@
 # построчно данные, вводимые пользователем. Об окончании ввода данных
 # свидетельствует пустая строка.
 
-with open('l5t1_text.txt', 'w', encoding='UTF-8') as text_txt:
+with open('lesson_5_task_1_text.txt', 'w', encoding='UTF-8') as text_txt:
     a = True
     while a:
         a = input('Введите данные для записи в файл:\n')
