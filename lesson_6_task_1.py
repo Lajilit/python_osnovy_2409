@@ -11,12 +11,12 @@ from time import sleep
 
 
 class TrafficLight:
-    __colour = ['red', 'yellow', 'green', 'yellow']
+    _colour = ['red', 'yellow', 'green', 'yellow']
 
     def running(self):
-        for colour in TrafficLight.__colour:
-            self.__colour = colour
-            self._change_colour(self.__colour)
+        for colour in TrafficLight._colour:
+            self._colour = colour
+            self._change_colour(self._colour)
 
     @staticmethod
     def _change_colour(colour):

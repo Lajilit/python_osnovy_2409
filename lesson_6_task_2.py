@@ -9,11 +9,11 @@
 
 class Road:
     def __init__(self, length, width):
-        self.__length = length
-        self.__width = width
+        self._length = length
+        self._width = width
 
     def calc_asphalt_mass(self, thick, exp_to_sq_m):
-        asphalt_mass = self.__length * self.__width * thick * exp_to_sq_m
+        asphalt_mass = self._length * self._width * thick * exp_to_sq_m
         return asphalt_mass
 
 
