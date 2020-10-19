@@ -78,18 +78,17 @@ class Cell:
         return result
 
 
-a = Cell(3)
-b = Cell(4)
-c = Cell(5)
-d = Cell(6)
-new = a * c
+if __name__ == '__main__':
+    a = Cell(3)
+    b = Cell(4)
+    c = Cell(5)
+    d = Cell(6)
+    new = a * c
 
-print(a * b)
-print(c + d)
-print(b - c)
-print(d / a)
-print(new)
-print(new.make_order(3))
-print(a.make_order(3))
-
-
+    print(a * b)
+    print(c + d)
+    print(b - c)
+    print(d / a)
+    print(new)
+    print(new.make_order(3))
+    print(a.make_order(3))
