@@ -19,7 +19,7 @@ class Clothes(ABC):
         if isinstance(size, (int, float)):
             self.size = size
         else:
-            raise ValueError(f'Invalid argument: must be int or float')
+            raise TypeError(f'Invalid argument: must be int or float')
 
     @property
     def clothes_size(self):
