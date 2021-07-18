@@ -105,9 +105,3 @@ sport_car.show_speed()
 
 police_car.go(100)
 print(police_car.is_police)
-
-
-
-
-
-
