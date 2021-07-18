@@ -9,8 +9,8 @@
 
 
 class Stationery:
-    def __init__(self, name):
-        self.name = name
+    def __init__(self, title):
+        self.title = title
 
     def draw(self):
         print('Запуск отрисовки.')
@@ -18,17 +18,17 @@ class Stationery:
 
 class Pen(Stationery):
     def draw(self):
-        print(f'Запуск отрисовки. {self.name} - тонкая линия, синяя паста')
+        print(f'Запуск отрисовки. {self.title} - тонкая линия, синяя паста')
 
 
 class Pencil(Stationery):
     def draw(self):
-        print(f'Запуск отрисовки. {self.name} - графитный след')
+        print(f'Запуск отрисовки. {self.title} - графитный след')
 
 
 class Handle(Stationery):
     def draw(self):
-        print(f'Запуск отрисовки. {self.name} - толстая черная линия')
+        print(f'Запуск отрисовки. {self.title} - толстая черная линия')
 
 
 stat = Stationery('Line')
